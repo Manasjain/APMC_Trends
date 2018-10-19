@@ -50,6 +50,7 @@ The Intial data preprocessing is done by removing all non-alphanumeric character
 Outliers are treated using standard statistical procedure, wherein all values not within the 5th to 95th percentile in the interquantile ranges are removed. Although different percentile range can be choosen. This is done after the data has been grouped by commodity, so as to be sensitive to the price of different commodities. For example, the normal price of commodity A may be much higher than that of commodity B, so the outlier detection must be performed as per individual commodity price range. 
 
 Showing below two figures of modal price of 'gram' with and without outliers.
-![](gram_with_outliers.png)
-![](gram_without_outliers.png)
+![](Images/gram_with_outliers.png)
+![](Images/gram_without_outliers.png)
+
 
