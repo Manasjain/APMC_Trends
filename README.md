@@ -52,5 +52,3 @@ Outliers are treated using standard statistical procedure, wherein all values no
 Showing below two figures of modal price of 'gram' with and without outliers.
 ![](Images/gram_with_outliers.png)
 ![](Images/gram_without_outliers.png)
-
-
