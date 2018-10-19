@@ -1,15 +1,15 @@
-# [APMC_Trends](README.md)
+# APMC_Trends
 Understanding trends in APMC (Agricultural produce market committee)/mandi price &amp; quantity arrival data for different commodities in Maharashtra.
-## [Objective](README.md)
+## Objective
 - Test and filter outliers.
 - Understand price fluctuations accounting the seasonal effect
 - Detect seasonality type (multiplicative or additive) for each cluster of APMC and commodities
 - De-seasonalise prices for each commodity and APMC according to the detected seasonality type
 - Compare prices in APMC/Mandi with MSP(Minimum Support Price)- raw and deseasonalised
-## [Getting Started](README.md)
+## Getting Started
 All the trends analysis is done using jupyter notebook and python libraries.
 
-### [Installation](README.md)
+### Installation
 
 #### Jupyter lab
 - Easiest way to install Jupyter Notebook and other Ml libraries is using [Conda](https://conda.io/docs/),which is the package manager that the [Anaconda](http://docs.continuum.io/anaconda/) distribution is built upon.
