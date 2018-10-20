@@ -56,7 +56,7 @@ Showing below two figures of the modal price of 'wheathusked' with and without o
 ### TIME SERIES &amp; TESTING STATIONARITY
 **Statistical stationarity**: A stationary time series is one whose statistical properties such as mean, variance, autocorrelation, etc. are all constant over time.
 
-**why testing stationarity?**
+**Why testing stationarity?**
 - Any non-stationary processes can be decompose into **trend**, **seasonality** and **residual**. So, before finding seasonality type we ensure that our time series has some seasonal composition in it.
 - A stationary process can further be modeled into any standard statistical model to predict future values.
 
@@ -74,19 +74,29 @@ Suppose we consider only those APMC/commodity combinations with enough data to c
 Eyeballing the plot we cannot comment much on trend and seasonality but by Dickey-Fuller test our ADF Statistic value is less than 10% critical value, which means we are assured of that our series is 90% stationary. On further analyzing we p-value of the test is also more than 0.05, thus this indicates that there is some non-stationarity present in it.
 
 ### MAKING THE TIME SERIES STATIONARY
-- REDUCING TREND USING MOVING AVERAGE
+- Reducing trend using moving average:
+
 We can reduce the trend in a time series by taking a log of it then subtract the rolling mean of the series. This gives much better results on the Dickey-Fuller test.
-- REDUCING SEASONALITY ALONG WITH TREND USING SEASONAL-DECOMPOSING TECHNIQUE
+
+- Reducing Seasonality along with Trend using Decomposing :
 Model both trend and seasonality, then remove them from the time series.
     - Additive model: In an additive time series, the components add together to make the time series. If you have an increasing trend, you still see roughly the same size peaks and troughs throughout the time series.
     - Multiplicative model: In a multiplicative time series, the components multiply together to make the time series.If you have an increasing trend, the amplitude of seasonal activity increases. Everything becomes more exaggerated.
+
+
 Below are the results of an additive model of seasonal decomposition
 ![](Images/Original.png)
 ![](Images/Trend.png)
 ![](Images/seasonal.png)
 ![](Images/residual.png)
+
+
 Remove the trend and seasonality from the Time series and now we can use the residual values. On checking stationarity, we get ADF Statistic: -6.767319 which is less than 1% critical value.
+
+
 ![Results of stationarity test](Images/testresults2.png)
+
+
 This is stationary because:
 - the test statistic is lower than 1% critical values.
 - the mean and std variations have small variations with time.
@@ -122,7 +132,9 @@ param = paramList[aiclist.index(min(aiclist))]
 After finding optimal parameters we will obtain modal fitted values according to those parameters.
 
 Finally, for our third objective, we will load MSP data from the CSV, group them by commodity, resample them by each month and plot it with our modal fit values and our original time series.
+
 ![](Images/mspVSmandi.png)
+
 
 ### POINTS TO NOTE:
 - It is possible to reduce computation by checking only those clusters that return a positive ADF test for non-stationarity.
